@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux'
-import Form from './common/containers/Form'
-
+import { CountComponent } from './core/components/countComponent/countComponent'
+import {store} from './store'
 import './index.css';
 
 ReactDOM.render(
-  // <Provider store={}>
-  // </Provider>,
-  <Form/>,
+  <Provider store={store}>
+    <CountComponent/>
+  </Provider>,
   document.getElementById('root')
 );
