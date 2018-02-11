@@ -1,13 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux'
-import Form from './common/containers/Form'
+import { createStore } from 'redux'
+
+import countReducers from './core/components/countComponent/reducers'
 
 import './index.css';
 
+let store = createStore(countReducers)
+
 ReactDOM.render(
-  // <Provider store={}>
-  // </Provider>,
-  <Form/>,
+   <Provider store={store}>
+      <Form/>
+   </Provider>,
   document.getElementById('root')
 );
