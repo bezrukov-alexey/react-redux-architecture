@@ -12,7 +12,7 @@ export const subtractCount = (event, currValue) => {
 }
 
 export const multiplicationCountByTwo = (event, currValue) => { 
-    return { type: ActionTypes.MULTI_COUNT, payload: currValue * 2 }
+    return multiplicationCountByFactor(event, currValue, 2);
 }
 
 export const multiplicationCountByFactor = (event, currValue, factor) => { 
@@ -20,7 +20,7 @@ export const multiplicationCountByFactor = (event, currValue, factor) => {
 }
 
 export const divideCountByTwo = (event, currValue) => { 
-    return { type: ActionTypes.DIVIDE_COUNT, payload: currValue / 2 }
+    return divideCountByFactor(event, currValue, 2);
 }
 
 export const divideCountByFactor = (event, currValue, factor) => { 
