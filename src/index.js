@@ -16,6 +16,7 @@ ReactDOM.render(
    <Provider store={store}>
     <Router>
       <div>
+        <div>Hello</div>
         <Link to="/">Main Page</Link>
         <Link to="/SecondPage">Second Page</Link>
         <hr/>

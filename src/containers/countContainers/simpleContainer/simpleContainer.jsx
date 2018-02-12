@@ -1,4 +1,5 @@
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 import Form from '../../../components/plusMinusForm'
 import { addCount, subtractCount} from '../actions'
 
@@ -9,15 +10,11 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => {
-    return {
-      addCount: (event, count) => {
-        dispatch(addCount(event, count));
-      },
-      subtractCount: (event, count) => {
-        dispatch(subtractCount(event, count));
-      }
-    }
+  return { 
+    addCount: bindActionCreators(addCount, dispatch), 
+    subtractCount: bindActionCreators(subtractCount, dispatch) 
   }
+}
 
 export const SimpleContainer = connect(
   mapStateToProps,
