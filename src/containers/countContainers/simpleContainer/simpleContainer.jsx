@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import Form from '../../../components/form'
+import Form from '../../../components/plusMinusForm'
 import { addCount, subtractCount} from '../actions'
 
 const mapStateToProps = state => { 

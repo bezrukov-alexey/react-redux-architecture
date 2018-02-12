@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import Form from '../../../components/form'
+import Form from '../../../components/multipleDivideForm'
 import { divideCountByTwo,multiplicationCountByTwo } from '../actions'
 
 const mapStateToProps = state => { 
@@ -10,7 +10,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-      multiplicationCountByTwo: (event, count) => {
+      multiplicateCountByTwo: (event, count) => {
         dispatch(multiplicationCountByTwo(event, count));
       },
       divideCountByTwo: (event, count) => {
