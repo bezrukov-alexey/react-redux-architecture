@@ -1,9 +1,9 @@
 import React from 'react'
-import { CountComponent } from '../../containers/countComponent/countComponent'
+import { SimpleContainer } from '../../containers/countContainers/simpleContainer/simpleContainer'
 
 const MainPage = () => (
   <div>
-    <CountComponent/>
+    <SimpleContainer/>
   </div>
 )
 
