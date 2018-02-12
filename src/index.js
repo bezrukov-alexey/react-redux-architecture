@@ -7,7 +7,6 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import countReducers from './containers/countContainers/reducers';
 import MainPage from './pages/mainPage/mainPage';
 import SecondPage from './pages/secondPage/secondPage';
-import CacheContainer from "./containers/cacheContainer/cacheContainer";
 
 import './index.css';
 
@@ -18,7 +17,6 @@ ReactDOM.render(
     <Router>
       <div>
         <div>Hello</div>
-        <CacheContainer/>
         <Link to="/">Main Page</Link>
         <Link to="/SecondPage">Second Page</Link>
         <hr/>
