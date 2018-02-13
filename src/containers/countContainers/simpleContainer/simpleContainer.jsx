@@ -27,18 +27,14 @@ export class SimpleContainerComponent extends React.Component {
 }
 
 //-- Биндинги для Redux
-const mapStateToProps = state => { 
-    return {
-        count: state.changeCount.count
-    }
-};
+const mapStateToProps = state => ({ 
+  count: state.changeCount.count  
+});
 
-const mapDispatchToProps = dispatch => {
-  return { 
-    addCount: bindActionCreators(addCount, dispatch), 
-    subtractCount: bindActionCreators(subtractCount, dispatch) 
-  }
-}
+const mapDispatchToProps = dispatch => ({
+  addCount: bindActionCreators(addCount, dispatch),
+  subtractCount: bindActionCreators(subtractCount, dispatch) 
+});
 
 export default connect(
   mapStateToProps,

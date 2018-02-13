@@ -53,3 +53,13 @@ body {
     display:block;
     font-size: 20px;
   }
+
+  .basket {
+    border-radius: 3px;
+    border-color: blanchedalmond;
+    border-style: solid;
+    height: 100px;
+    width:300px;
+    padding: 10px;
+    box-sizing: border-box;
+  }

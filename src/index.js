@@ -1,17 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import thunkMiddleware from 'redux-thunk'
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
-import countReducers from './containers/countContainers/reducers';
+import rootReducer from './containers/reducers';
 import MainPage from './pages/mainPage/mainPage';
 import SecondPage from './pages/secondPage/secondPage';
 
 import './index.css';
 
-let store = createStore(countReducers);
+let store = createStore(
+  rootReducer,
+  applyMiddleware(
+    thunkMiddleware
+  )  
+);
 
+console.log('store', store.getState());
 ReactDOM.render(
    <Provider store={store}>
     <Router>

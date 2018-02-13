@@ -1,10 +1,14 @@
 import * as ActionTypes from './actionTypes';
 
-export let changeCount = (state = { count: 0 }, action) => {
+const defaultState = {
+    id: '-1'
+};
+
+export let basket = (state = defaultState, action) => {
 
     for(var type in ActionTypes) {
         if (type === action.type) {
-            return {...state, count: action.payload };
+            return Object.assign({}, state, action.payload);
         }
     }
     
