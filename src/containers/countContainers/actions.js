@@ -1,6 +1,7 @@
 import * as ActionTypes from "./actionTypes"
 
 export const addCount = (event, currValue) => { 
+    console.log(currValue);
     return { type: ActionTypes.ADD_COUNT, payload: currValue + 1 }
 }
 

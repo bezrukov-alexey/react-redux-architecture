@@ -1,10 +1,7 @@
-import React from 'react'
-import { SimpleContainer } from '../../containers/countContainers/simpleContainer/simpleContainer'
+import React from 'react';
+import SimpleContainer from '../../containers/countContainers/simpleContainer/simpleContainer';
 
-const MainPage = () => (
+export default () => 
   <div>
     <SimpleContainer/>
   </div>
-)
-
-export default MainPage
