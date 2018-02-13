@@ -1,10 +1,7 @@
-import React from 'react'
-import { ImprovedContainer } from '../../containers/countContainers/improvedContainer/improvedContainer'
+import React from 'react';
+import ImprovedContainer from '../../containers/countContainers/improvedContainer/improvedContainer';
 
-const SecondPage = () => (
+export default () =>
   <div>
     <ImprovedContainer/>
   </div>
-)
-
-export default SecondPage
