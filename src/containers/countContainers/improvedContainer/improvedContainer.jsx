@@ -20,7 +20,7 @@ export class ImprovedContainerComponent extends React.Component {
       count={this.props.count}
       divideCount={this.divideClickHandler}
       multipleCount={this.multipleClickHandler}
-    />  
+    />
 };
 
 //-- Биндинги для Redux
