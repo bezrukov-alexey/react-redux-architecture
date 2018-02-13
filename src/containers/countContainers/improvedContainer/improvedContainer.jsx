@@ -1,5 +1,6 @@
 import { connect } from 'react-redux'
 import Form from '../../../components/multipleDivideForm'
+import { bindActionCreators } from 'redux'
 import { divideCountByTwo, multiplicationCountByTwo } from '../actions'
 
 const mapStateToProps = state => { 

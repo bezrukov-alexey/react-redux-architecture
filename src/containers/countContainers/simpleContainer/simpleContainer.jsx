@@ -1,7 +1,19 @@
+import React from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import Form from '../../../components/plusMinusForm'
 import { addCount, subtractCount} from '../actions'
+import SimplePresenter from './simplePresenter'
+
+class SimpleContainerComponent extends React.Component {
+  componentDidMount = () => {
+
+  }
+
+  render = () => (
+    
+    <SimplePresenter props={this.props}/>
+  )
+}
 
 const mapStateToProps = state => { 
     return {
@@ -19,6 +31,4 @@ const mapDispatchToProps = dispatch => {
 export const SimpleContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(Form)
-
-export default SimpleContainer
+)(SimpleContainerComponent)
