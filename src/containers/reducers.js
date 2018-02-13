@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { basket } from './BasketContainer/reducers';
+import { basket } from './basket/reducers';
 import { changeCount } from './countContainers/reducers';
 
 export default combineReducers({

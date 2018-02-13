@@ -1,8 +1,6 @@
 import * as ActionTypes from './actionTypes';
 
-const defaultState = {
-    id: '-1'
-};
+const defaultState = {};
 
 export let basket = (state = defaultState, action) => {
 
