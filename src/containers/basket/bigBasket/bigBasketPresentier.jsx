@@ -1,13 +1,19 @@
 import React from 'react';
+import BasketLineComponent from '../basketLine/basketLineContainer'
 
 /**
- * Разметка для SimpleComponent
+ * Разметка для BigBasketComponent
  */
 export default ({amount, branchName, type, lines = []}) =>
     <div>
         <label>Стоимость покупок: {amount}</label> <br/>
         <label>Тип: {type}</label> <br/>
         <label>Филиал: {branchName}</label> <br/>
+        <label>Товары в корзине:</label>
+        {
+            lines.map((value, index) => 
+                <BasketLineComponent key={index} line={value} />
+            )
+        }
 
-        {lines.map(value => <div>Line</div>)}
     </div>

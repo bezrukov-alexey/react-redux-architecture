@@ -1,7 +1,5 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
-import { loadBasket } from '../actions'
 import BasketPresentier from './bigBasketPresentier'
 
 export class BigBasketContainerComponent extends React.Component {
@@ -27,8 +25,4 @@ const mapStateToProps = state => ({
     lines: state.basket.lines
 })
 
-const mapDispatchToProps = dispatch => ({
-    loadBasket: bindActionCreators(loadBasket, dispatch)
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(BigBasketContainerComponent)
+export default connect(mapStateToProps)(BigBasketContainerComponent)
