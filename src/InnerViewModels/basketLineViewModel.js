@@ -4,5 +4,6 @@ export class BasketLineViewModel {
         this.name = name
         this.price = price
         this.quanity = quanity
+        this.error = ""
     }
 }

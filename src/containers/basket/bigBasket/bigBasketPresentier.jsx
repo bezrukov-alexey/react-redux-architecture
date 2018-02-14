@@ -4,8 +4,9 @@ import BasketLineComponent from '../basketLine/basketLineContainer'
 /**
  * Разметка для BigBasketComponent
  */
-export default ({amount, branchName, type, lines = []}) =>
+export default ({amount, branchName, type, lines = [], error}) =>
     <div>
+        { error && <label>{error}</label> }
         <label>Стоимость покупок: {amount}</label> <br/>
         <label>Тип: {type}</label> <br/>
         <label>Филиал: {branchName}</label> <br/>

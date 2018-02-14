@@ -13,7 +13,6 @@ export class BasketLineComponentContainer extends React.Component {
         <BasketLinePresentier
             line={this.props.line}
             onChangeQuanity={this.onChangeQuanityHandler}
-            quanity={this.props.line.quanity}
         />
 }
 

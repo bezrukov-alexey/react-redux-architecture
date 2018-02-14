@@ -10,6 +10,7 @@ export class BigBasketContainerComponent extends React.Component {
             branchName={this.props.branchName}
             type={this.props.type}
             lines={this.props.lines}
+            error={this.props.error}
         />
 }
 
@@ -18,7 +19,8 @@ const mapStateToProps = state => ({
     amount: state.basket.amount,
     branchName: state.basket.branchName,
     type: state.basket.type,
-    lines: state.basket.lines
+    lines: state.basket.lines,
+    error: state.basket.error
 })
 
 export default connect(mapStateToProps)(BigBasketContainerComponent)

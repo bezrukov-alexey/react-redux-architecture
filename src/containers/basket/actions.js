@@ -22,14 +22,17 @@ export function updateBasketLineQuanity(id, quanity) {
         state.lines = state.lines.map(line => {
                                   
             if (line.id === id) {
-                var updatedLine = {
-                    ...line,
-                    quanity
+                //line - возможно BO
+                let result = basketLineLogic.ChangeQuanity(line, quanity)
+                
+                if (result.Success){
+                    state.error = ""
+                    return {...result.Value, error: ""}
                 }
-                //buisiness Logic
-                if (basketLineLogic.ValidateLine(updatedLine))
-                    return updatedLine
-
+                else{
+                    state.error = result.Errors
+                    return {...line, error: result.Errors}
+                }
             }
             return line
         })
