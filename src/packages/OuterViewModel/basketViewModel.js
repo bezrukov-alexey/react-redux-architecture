@@ -1,12 +1,5 @@
 export class BasketViewModel {
-    constructor({   
-                    id, 
-                    type,
-                    branchId,
-                    amount,
-                    buyersId,
-                    lines
-                }) {
+    constructor({ id, type, branchId, amount, buyersId, lines }) {
         this.id = id
         this.type = type
         this.branchId = branchId;
