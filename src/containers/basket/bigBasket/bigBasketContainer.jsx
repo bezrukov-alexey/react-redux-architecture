@@ -4,10 +4,6 @@ import BasketPresentier from './bigBasketPresentier'
 
 export class BigBasketContainerComponent extends React.Component {
 
-    componentDidMount() {
-        
-    }
-
     render = () => 
         <BasketPresentier
             amount={this.props.amount}

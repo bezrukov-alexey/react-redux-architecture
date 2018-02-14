@@ -11,9 +11,8 @@ export default ({amount, branchName, type, lines = []}) =>
         <label>Филиал: {branchName}</label> <br/>
         <label>Товары в корзине:</label>
         {
-            lines.map((value, index) => 
-                <BasketLineComponent key={index} line={value} />
+            lines.map((line, index) => 
+                <BasketLineComponent key={index} line={line} />
             )
         }
-
     </div>

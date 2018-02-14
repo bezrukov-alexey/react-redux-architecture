@@ -1,1 +1,2 @@
-export const LOAD_BASKET = "LOAD_BASKET";
+export const LOAD_BASKET = 'LOAD_BASKET'
+export const UPDATE_LINE_QUANITY = 'UPDATE_LINE_QUANITY'

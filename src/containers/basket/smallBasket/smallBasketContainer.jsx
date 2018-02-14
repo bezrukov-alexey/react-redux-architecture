@@ -31,4 +31,4 @@ const mapDispatchToProps = dispatch => ({
     loadBasket: bindActionCreators(loadBasket, dispatch)
 });
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SmallBasketContainerComponent));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SmallBasketContainerComponent))
