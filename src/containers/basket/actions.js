@@ -1,5 +1,6 @@
 import * as ActionTypes from './actionTypes'
 import { getBasket } from '../../managers/basketManager'
+import * as basketLineLogic from '../../packages/BusinessLogics/basket/basketLine'
 
 export function loadBasket() {
 
@@ -19,11 +20,16 @@ export function updateBasketLineQuanity(id, quanity) {
     return (dispatch, getState) => {
         let state = Object.assign({}, getState().basket)
         state.lines = state.lines.map(line => {
+                                  
             if (line.id === id) {
-                return {
+                var updatedLine = {
                     ...line,
                     quanity
                 }
+                //buisiness Logic
+                if (basketLineLogic.ValidateLine(updatedLine))
+                    return updatedLine
+
             }
             return line
         })
